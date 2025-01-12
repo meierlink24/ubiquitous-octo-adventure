@@ -3,25 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ROCK JEWERLY </title>
+    <title>ROCK JEWELRY</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    
     <div class="menu">
-        <div class="logo"> <a href="index.html" id = "active" > ROCK JEWERLY </a>
-
+        <div class="logo"> 
+            <a href="index.html" id="active">ROCK JEWELRY</a>
+        </div>
+        <div class="options">
+            <a href="necklaces.html">Necklaces</a>
+            <a href="bracelets.html">Bracelets</a>
+            <a href="earrings.html">Earrings</a>
+            <a href="#">SALE</a>
+            <a href="#" class="cart">🛒 Cart (<span id="cart-count">0</span>)</a>
+        </div> 
     </div>
- 
-    
-   <div class="options">
-    <a href="#">Necklaces </a>
-    <a href="#">Bracelets </a>
-    <a href="#">Earrings </a>
-    <a href="#">SALE   </a>
-    
-   </div> 
 
-<script src="main.js"> </script>
+    <div class="promo">
+        <h1>Welcome to ROCK JEWELRY!</h1>
+        <p>Discover our exclusive collection of handcrafted jewelry.</p>
+    </div>
 
+    <div class="content">
+        <p>Scroll down to explore more about our products!</p>
+        <div class="product-list">
+            <div class="product">
+                <h2>Necklace 1</h2>
+                <p class="price" data-price="50">Price: $50</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product">
+                <h2>Bracelet 1</h2>
+                <p class="price" data-price="30">Price: $30</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product">
+                <h2>Earring 1</h2>
+                <p class="price" data-price="20">Price: $20</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product">
+                <h2>Necklace 2</h2>
+                <p class="price" data-price="60">Price: $60</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product">
+                <h2>Bracelet 2</h2>
+                <p class="price" data-price="40">Price: $40</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product">
+                <h2>Earring 2</h2>
+                <p class="price" data-price="25">Price: $25</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
 </body>
 </html>

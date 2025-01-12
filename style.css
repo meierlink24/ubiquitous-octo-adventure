@@ -1,10 +1,186 @@
-*{
-padding: 0; 
-margin: 0;
-}
-
-body{
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
     background-color: black;
     color: white;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
 
+.menu {
+    background-color: #333;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+.logo a {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+.options {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+.options a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    transition: background 0.3s;
+}
+
+.options a:hover {
+    background: #555;
+}
+
+.cart {
+    position: relative;
+}
+
+.promo {
+    text-align: center;
+    padding: 20px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.content {
+    padding: 20px;
+}
+
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.product {
+    background: #444;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+    transition: transform 0.2s; /* Add a hover effect */
+}
+
+.product:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.product h2 {
+    font-size: 18px;
+}
+
+.price {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.add-to-cart {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+    width: 100%; /* Make button full width */
+}
+
+.add-to-cart:hover {
+    background-color: #218838;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .menu {
+        flex-direction: column; /* Stack menu items vertically */
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    .options {
+        justify-content: center; /* Center options on smaller screens */
+    }
+
+    .options a {
+        padding: 10px 15px; /* Adjust padding for smaller screens */
+        font-size: 16px; /* Slightly smaller font size */
+    }
+
+    .promo h1 {
+        font-size: 22px; /* Adjust heading size */
+    }
+
+    .promo p {
+        font-size: 14px; /* Adjust paragraph size */
+    }
+
+    .product {
+        padding: 15px; /* Adjust padding for products */
+    }
+
+    .product h2 {
+        font-size: 16px; /* Adjust product title size */
+    }
+
+    .price {
+        font-size: 14px; /* Adjust price size */
+    }
+
+    .add-to-cart {
+        padding: 8px; /* Adjust button padding */
+    }
+}
+
+@media (max-width: 480px) {
+    .menu {
+        padding: 5px; /* Reduce padding for very small screens */
+    }
+
+    .logo a {
+        font-size: 20px; /* Smaller logo font size */
+    }
+
+    .options a {
+        padding: 8px; /* Further reduce padding */
+        font-size: 14px; /* Smaller font size */
+    }
+
+    .promo h1 {
+        font-size: 20px; /* Smaller heading size */
+    }
+
+    .promo p {
+        font-size: 12px; /* Smaller paragraph size */
+    }
+
+    .product {
+        padding: 10px; /* Further reduce product padding */
+    }
+
+    .product h2 {
+        font-size: 14px; /* Smaller product title size */
+    }
+
+    .price {
+        font-size: 12px; /* Smaller price size */
+    }
+
+    .add-to-cart {
+        padding: 6px; /* Smaller button padding */
+    }
 }
